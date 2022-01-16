@@ -41,7 +41,7 @@
     {
         "id": 4,
         "question": "Get stressed out easily",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -54,7 +54,7 @@
     {
         "id": 5,
         "question": "Have a rich vocabulary",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -106,7 +106,7 @@
     {
         "id": 9,
         "question": "Am relaxed most of the time",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -119,7 +119,7 @@
     {
         "id": 10,
         "question": "Have difficulty understanding abstract ideas",
-        "category": "intellect",
+        "category": "openness",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -171,7 +171,7 @@
     {
         "id": 14,
         "question": "Worry about things",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -184,7 +184,7 @@
     {
         "id": 15,
         "question": "Have a vivid imagination",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -236,7 +236,7 @@
     {
         "id": 19,
         "question": "Seldom feel blue",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -249,7 +249,7 @@
     {
         "id": 20,
         "question": "Am not interested in abstract ideas",
-        "category": "intellect",
+        "category": "openness",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -301,7 +301,7 @@
     {
         "id": 24,
         "question": "Am easily disturbed",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -314,7 +314,7 @@
     {
         "id": 25,
         "question": "Have excellent ideas",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -366,7 +366,7 @@
     {
         "id": 29,
         "question": "Get upset easily",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -379,7 +379,7 @@
     {
         "id": 30,
         "question": "Do not have a good imagination",
-        "category": "intellect",
+        "category": "openness",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -431,7 +431,7 @@
     {
         "id": 34,
         "question": "Change my mood a lot",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -444,7 +444,7 @@
     {
         "id": 35,
         "question": "Am quick to understand things",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -496,7 +496,7 @@
     {
         "id": 39,
         "question": "Have frequent mood swings",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -509,7 +509,7 @@
     {
         "id": 40,
         "question": "Use difficult words",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -561,7 +561,7 @@
     {
         "id": 44,
         "question": "Get irritated easily",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -574,7 +574,7 @@
     {
         "id": 45,
         "question": "Spend time reflecting on things",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
@@ -626,7 +626,7 @@
     {
         "id": 49,
         "question": "Often feel blue",
-        "category": "emotional_stability",
+        "category": "neuroticism",
         "scale": -1,
         "options": [
             "Very Inaccurate",
@@ -639,7 +639,7 @@
     {
         "id": 50,
         "question": "Am full of ideas",
-        "category": "intellect",
+        "category": "openness",
         "scale": 1,
         "options": [
             "Very Inaccurate",
