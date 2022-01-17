@@ -1,7 +1,7 @@
 import { Box, Button, Card, Grid, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Background from "../background.jpg";
+import Background from "../images/question.jpg";
 import { DataStore } from "./MarksStore";
 export default function Question() {
   const {
@@ -26,10 +26,11 @@ export default function Question() {
       <Box
         style={{
           display: "flex",
-          height: "100vh",
+          height: "90vh",
           justifyContent: "center",
           alignItems: "center",
           alignContent: "center",
+          padding:"2%"
         }}
       >
         <Card
@@ -47,13 +48,13 @@ export default function Question() {
             <Grid item xs={12} sm={6} md={8} lg={8}>
               <Typography
                 variant="h4"
-                style={{ fontWeight: "bold", color: "#fff" }}
+                style={{ fontWeight: "bold", color: "#444" }}
               >
                 Q{question[currentQuestionNo].id}/50
               </Typography>
               <Typography
                 variant="h6"
-                style={{ fontWeight: "bold", color: "#fff" }}
+                style={{color: "#444" }}
               >
                 {question[currentQuestionNo].question}
               </Typography>
@@ -69,7 +70,7 @@ export default function Question() {
                     marginBottom: "5px",
                     cursor: "pointer",
                     maxWidth: "100%",
-                    backgroundColor: button === data && "white",
+                    backgroundColor: button === data && "#00adff40",
                   }}
                   onClick={() =>
                     handleClick(
@@ -80,31 +81,31 @@ export default function Question() {
                   }
                 >
                   <Typography
-                    style={{ color: button === data ? "black" : "#fff" }}
+                    style={{ color: button === data ? "#444" : "#444" }}
                   >
                     {data}
                   </Typography>
                 </Box>
               ))}
-              <Box>
+              <Box style={{display: "flex",justifyContent: "flex-end",marginTop:"20px"}}>
                 {currentQuestionNo < question.length - 1 ? (
                   <Box>
                     {button ? (
                       <Button
-                        variant="outlined"
+                        variant="contained"
                         onClick={handleNextQuestion}
-                        style={{ color: "#fff" }}
+                        style={{ backgroundColor:"#444",color:"#fff"}}
                       >
-                        Next Question
+                        Next
                       </Button>
                     ) : (
                       <Button
                         disabled
                         variant="outlined"
                         onClick={handleNextQuestion}
-                        style={{ color: "#fff" }}
+                        style={{}}
                       >
-                        Next Question
+                        Next
                       </Button>
                     )}
                   </Box>

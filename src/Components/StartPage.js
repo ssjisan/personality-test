@@ -1,9 +1,28 @@
-import { Box, Button, Card, Grid, Typography } from "@mui/material";
-import React from "react";
+import {
+  Box,
+  Button,
+  Card,
+  Grid,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import Lottie from "lottie-web";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Background from "../bg.png";
-
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export default function StartPage() {
+  const container = useRef(null);
+  const forBelow600 = useMediaQuery("(max-width:600px)");
+  useEffect(() => {
+    Lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../Assets/start.json"),
+    });
+  }, []);
   return (
     <Box
       style={{
@@ -18,10 +37,10 @@ export default function StartPage() {
       <Box
         style={{
           display: "flex",
-          height: "100vh",
+          height: forBelow600 ? "95vh" : "90vh",
           justifyContent: "center",
           alignItems: "center",
-          alignContent: "center",
+          padding: "2%",
         }}
       >
         <Card
@@ -35,25 +54,39 @@ export default function StartPage() {
             border: "1px solid rgba(255, 255, 255, 0.125)",
           }}
         >
-          <Grid container spacing={2} justifyContent="center" alignItems="center">
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            alignItems="center"
+          >
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <Typography variant="h4" style={{ fontWeight: "bold",marginBottom:"15px"}}>
+              <Typography
+                variant="h4"
+                style={{ fontWeight: "bold", marginBottom: "15px" }}
+              >
                 Big Five Personality Test
               </Typography>
-              <Typography variant="body1" style={{ color: "#484848",marginBottom:"5px"}}>
+              <Typography
+                variant="body1"
+                style={{ color: "#484848", marginBottom: "5px" }}
+              >
                 Know how you are as a human being
               </Typography>
-              <Typography variant="body1" style={{ color: "#484848",marginBottom:"15px"}}>
+              <Typography
+                variant="body1"
+                style={{ color: "#484848", marginBottom: "15px" }}
+              >
                 This test contains 50 statements. There is no time limit.Most
                 people take about 5 minutes - please allow yourself plenty of
                 time.
               </Typography>
-              <Link to="/Questions">
-                <Button variant="outlined">Lets's Start</Button>
+              <Link to="/Questions" style={{ textDecoration: "none" }}>
+               <Button variant="contained" style={{borderRadius:"50px"}}>Start</Button>
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <img src="https://i.ibb.co/DLKPckz/People-and-emotions-concept-icons-set-with-laugh-and-anger-symbols-flat-isolated-vector-illustration.jpg" style={{maxWidth:"100%"}}/>
+              {/* <Box ref={container} style={{maxWidth: '100%'}}></Box> */}
             </Grid>
           </Grid>
         </Card>
