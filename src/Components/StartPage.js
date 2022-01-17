@@ -35,7 +35,7 @@ export default function StartPage() {
             border: "1px solid rgba(255, 255, 255, 0.125)",
           }}
         >
-          <Grid container>
+          <Grid container justifyContent="center" alignItems="center">
             <Grid item lg={6}>
               <Typography variant="h4" style={{ fontWeight: "bold",marginBottom:"15px"}}>
                 Big Five Personality Test
@@ -52,7 +52,9 @@ export default function StartPage() {
                 <Button variant="outlined">Lets's Start</Button>
               </Link>
             </Grid>
-            <Grid item lg={6}></Grid>
+            <Grid item lg={6}>
+              <img src="https://i.ibb.co/DLKPckz/People-and-emotions-concept-icons-set-with-laugh-and-anger-symbols-flat-isolated-vector-illustration.jpg" style={{maxWidth:"100%"}}/>
+            </Grid>
           </Grid>
         </Card>
       </Box>
