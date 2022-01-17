@@ -86,7 +86,7 @@ export default function StartPage() {
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              {/* <Box ref={container} style={{maxWidth: '100%'}}></Box> */}
+              <Box ref={container} style={{maxWidth: '100%'}}></Box>
             </Grid>
           </Grid>
         </Card>
