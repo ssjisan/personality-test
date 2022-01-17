@@ -46,7 +46,7 @@ export default function Question() {
           <Grid container spacing={10}>
             <Grid item xs={12} sm={6} md={8} lg={8}>
               <Typography
-                variant="h5"
+                variant="h4"
                 style={{ fontWeight: "bold", color: "#fff" }}
               >
                 Q{question[currentQuestionNo].id}/50
