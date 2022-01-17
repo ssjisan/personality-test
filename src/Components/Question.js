@@ -78,6 +78,7 @@ export default function Question() {
     countResult();
     const nextQuestion = currentQuestionNo + 1;
     setCurrentQuestionNo(nextQuestion);
+    setButton()
   };
   const handleFinish = () => {
     countResult();
