@@ -1,10 +1,12 @@
 import { Box, Button, Card, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
 import data from "../Question/Data.json";
+import Background from "../background.jpg";
 export default function Question() {
   const [question, setQuestion] = useState(data);
   const [count, setCount] = useState(0);
   const [state, setState] = useState("");
+  const [button, setButton] = useState("");
   const [currentQuestionNo, setCurrentQuestionNo] = useState(0);
   const [extraversion, setExtraversion] = useState(0);
   const [agreeableness, setAgreeableness] = useState(0);
@@ -13,6 +15,7 @@ export default function Question() {
   const [openness, setOpenness] = useState(0);
   const handleClick = (category, scale, data) => {
     setState(category);
+    setButton(data)
     let value = 0;
     if (scale === 1) {
       if (data === "Very Inaccurate") {
@@ -94,19 +97,22 @@ export default function Question() {
   return (
     <Box
       style={{
-        height: "98vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        alignContent: "center",
+        backgroundImage: `url(${Background})`,
+        height: "100vh",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundColor: "#cccccc",
       }}
     >
+      <Box style={{display: "flex",height: "100vh", justifyContent: "center", alignItems: "center",alignContent:"center"}}>
       <Card
         style={{
           width: 1000,
           padding: "2%",
-          backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: " rgba(25, 25, 25, 0.75)",
+          background: "rgba( 255, 255, 255, 0.2 )",
+          backdropFilter: "blur( 20px )",
+          boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
           borderRadius: "12px",
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
@@ -137,6 +143,7 @@ export default function Question() {
                   marginBottom: "5px",
                   cursor: "pointer",
                   maxWidth: "100%",
+                  backgroundColor: button === data && "white",
                 }}
                 onClick={() =>
                   handleClick(
@@ -146,7 +153,7 @@ export default function Question() {
                   )
                 }
               >
-                <Typography style={{ color: "#fff" }}>{data}</Typography>
+                <Typography style={{ color: button === data ? "black" : "#fff"}}>{data}</Typography>
               </Box>
             ))}
             <Box>
@@ -161,6 +168,7 @@ export default function Question() {
           </Grid>
         </Grid>
       </Card>
+      </Box>
     </Box>
   );
 }

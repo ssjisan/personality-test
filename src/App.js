@@ -1,14 +1,15 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Question from "./Components/Question";
+import StartPage from "./Components/StartPage";
 function App() {
   return (
     <div>
-      <Question/>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={Question}/>
+          <Route exact path="/" element={<StartPage/>}/>
+          <Route path="/Questions" element={<Question/>}/>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
