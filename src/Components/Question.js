@@ -1,7 +1,7 @@
 import { Box, Button, Card, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
-import data from "../Question/Data.json";
 import Background from "../background.jpg";
+import data from "../Question/Data.json";
 export default function Question() {
   const [question, setQuestion] = useState(data);
   const [count, setCount] = useState(0);
