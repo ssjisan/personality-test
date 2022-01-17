@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 import Background from "../background.jpg";
 import { DataStore } from "./MarksStore";
 export default function Question() {
-  const {question,currentQuestionNo,button,handleClick,handleNextQuestion,handleFinish}=useContext(DataStore)
+  const {
+    question,
+    currentQuestionNo,
+    button,
+    handleClick,
+    handleNextQuestion,
+    handleFinish,
+  } = useContext(DataStore);
   return (
     <Box
       style={{
@@ -81,12 +88,26 @@ export default function Question() {
               ))}
               <Box>
                 {currentQuestionNo < question.length - 1 ? (
-                  <Button
-                    onClick={handleNextQuestion}
-                    style={{ color: "#fff" }}
-                  >
-                    Next Question
-                  </Button>
+                  <Box>
+                    {button ? (
+                      <Button
+                        variant="outlined"
+                        onClick={handleNextQuestion}
+                        style={{ color: "#fff" }}
+                      >
+                        Next Question
+                      </Button>
+                    ) : (
+                      <Button
+                        disabled
+                        variant="outlined"
+                        onClick={handleNextQuestion}
+                        style={{ color: "#fff" }}
+                      >
+                        Next Question
+                      </Button>
+                    )}
+                  </Box>
                 ) : (
                   <Link to="/Results">
                     <Button onClick={handleFinish}>Finish</Button>

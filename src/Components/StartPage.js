@@ -26,7 +26,7 @@ export default function StartPage() {
       >
         <Card
           style={{
-            width: 1000,
+            maxWidth: 1000,
             padding: "2%",
             background: "rgba( 255, 255, 255, 0.2 )",
             backdropFilter: "blur( 20px )",
@@ -35,8 +35,8 @@ export default function StartPage() {
             border: "1px solid rgba(255, 255, 255, 0.125)",
           }}
         >
-          <Grid container justifyContent="center" alignItems="center">
-            <Grid item lg={6}>
+          <Grid container spacing={2} justifyContent="center" alignItems="center">
+            <Grid item xs={12} sm={6} md={6} lg={6}>
               <Typography variant="h4" style={{ fontWeight: "bold",marginBottom:"15px"}}>
                 Big Five Personality Test
               </Typography>
@@ -52,7 +52,7 @@ export default function StartPage() {
                 <Button variant="outlined">Lets's Start</Button>
               </Link>
             </Grid>
-            <Grid item lg={6}>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
               <img src="https://i.ibb.co/DLKPckz/People-and-emotions-concept-icons-set-with-laugh-and-anger-symbols-flat-isolated-vector-illustration.jpg" style={{maxWidth:"100%"}}/>
             </Grid>
           </Grid>
