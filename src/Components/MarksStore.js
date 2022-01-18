@@ -3,6 +3,7 @@ import data from "../Assets/Data.json";
 
 export const DataStore = createContext();
 export default function MarksStore({ children }) {
+   // eslint-disable-next-line
   const [question, setQuestion] = useState(data);
   const [count, setCount] = useState(0);
   const [state, setState] = useState("");
@@ -13,7 +14,6 @@ export default function MarksStore({ children }) {
   const [conscientiousness, setConscientiousness] = useState(0);
   const [neuroticism, setNeuroticism] = useState(0);
   const [openness, setOpenness] = useState(0);
-  const [stage, setStage] = useState("question");
   const handleClick = (category, scale, data) => {
     setState(category);
     setButton(data);
@@ -83,7 +83,6 @@ export default function MarksStore({ children }) {
   };
   const handleFinish = () => {
     countResult();
-    setStage("Result");
   };
   return (
     <DataStore.Provider

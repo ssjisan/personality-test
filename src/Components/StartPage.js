@@ -10,7 +10,6 @@ import Lottie from "lottie-web";
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Background from "../bg.png";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export default function StartPage() {
   const container = useRef(null);
   const forBelow600 = useMediaQuery("(max-width:600px)");

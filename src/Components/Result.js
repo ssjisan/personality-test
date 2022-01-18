@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Tooltip } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 import React, { useContext } from "react";
 import {
   Bar,
@@ -9,7 +9,6 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import Background from "../background.jpg";
 import { DataStore } from "./MarksStore";
 
 export default function Result() {
@@ -64,6 +63,11 @@ export default function Result() {
     neuroticism,
     openness,
   } = useContext(DataStore);
+  console.log(extraversion,
+    agreeableness,
+    conscientiousness,
+    neuroticism,
+    openness,);
   return (
     <Box
       style={{
