@@ -74,18 +74,28 @@ export default function StartPage() {
               </Typography>
               <Typography
                 variant="body1"
-                style={{ color: "#484848", marginBottom: "15px" }}
+                style={{ color: "#484848", marginBottom: "5px" }}
               >
                 This test contains 50 statements. There is no time limit.Most
                 people take about 5 minutes - please allow yourself plenty of
                 time.
               </Typography>
+              <Typography
+                variant="body1"
+                style={{ color: "#484848", marginBottom: "15px" }}
+              >
+                Double-check that you have made the right choice. If you need to
+                change an answer, simply select the new response and the
+                incorrect response will disappear.
+              </Typography>
               <Link to="/Questions" style={{ textDecoration: "none" }}>
-               <Button variant="contained" style={{borderRadius:"50px"}}>Start</Button>
+                <Button variant="contained" style={{ borderRadius: "50px" }}>
+                  Start
+                </Button>
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <Box ref={container} style={{maxWidth: '100%'}}></Box>
+              <Box ref={container} style={{ maxWidth: "100%" }}></Box>
             </Grid>
           </Grid>
         </Card>
