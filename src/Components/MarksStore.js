@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import data from "../Question/Data.json";
+import data from "../Assets/Data.json";
 
 export const DataStore = createContext();
 export default function MarksStore({ children }) {
