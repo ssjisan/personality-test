@@ -1,16 +1,18 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Question from "./Components/Question";
+// eslint-disable-next-line
 import StartPage from "./Components/StartPage";
 import "./App.css";
 import Result from "./Components/Result";
 import MarksStore from "./Components/MarksStore";
+import HomePage from "./Pages/HomePage";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <MarksStore>
           <Routes>
-            <Route exact path="/" element={<StartPage />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route path="/Questions" element={<Question />} />
             <Route path="/Results" element={<Result />} />
           </Routes>
