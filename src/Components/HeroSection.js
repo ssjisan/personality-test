@@ -28,7 +28,7 @@ export default function HeroSection() {
             </Typography>
           </Box>
           <Box>
-            <Link to="/Questions" style={{ textDecoration: "none" }}>
+            <Link to="/test" style={{ textDecoration: "none" }}>
               <Button variant="contained" sx={{ backgroundColor: "#4278EB" }}>
                 Explore Your Personality
               </Button>

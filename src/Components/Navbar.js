@@ -1,10 +1,9 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -25,9 +24,11 @@ export default function Navbar() {
             alignItems: "center",
           }}
         >
-          <Box>
-            <img src="Assets/Logo.png" alt="logo" />
-          </Box>
+          <Link to="/">
+            <Box>
+              <img src="Assets/Logo.png" alt="logo" />
+            </Box>
+          </Link>
           <Box sx={{ display: "flex", gap: 4 }}>
             <Typography
               sx={{ fontWeight: 400, fontSize: "16px", color: "#BFC3C8" }}
